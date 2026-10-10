@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+</head>
+<body>
+  <section id="A">
+
+    <div class="admin-panel">
+
+      <h2 class="admin-titulo">Panel de administrador</h2>
+
+      <!-- ================================================
+           CREAR PERFIL
+           ================================================ -->
+      <div class="admin-bloque">
+        <div class="admin-bloque-titulo">Crear perfil</div>
+
+        <div class="row">
+          <label>Nombre</label>
+          <input type="text" id="admin-nuevo-nombre"
+                 placeholder="Nombre del nuevo perfil"
+                 autocomplete="off" spellcheck="false">
+        </div>
+
+        <div class="row">
+          <label>Contraseña</label>
+          <input type="password" id="admin-nuevo-pass"
+                 placeholder="Contraseña"
+                 autocomplete="new-password">
+        </div>
+
+        <div class="row">
+          <label>Rol</label>
+          <select id="admin-nuevo-rol">
+            <option value="PRO">PRO</option>
+            <option value="EDITOR">EDITOR</option>
+            <option value="NIVEL3">NIVEL3</option>
+          </select>
+        </div>
+
+        <div class="btn-row">
+          <button class="action big" id="admin-crear-go">Crear perfil</button>
+        </div>
+
+        <div class="out" id="admin-crear-out">Esperando...</div>
+      </div>
+
+      <!-- ================================================
+           LISTA DE USUARIOS
+           ================================================ -->
+      <div class="admin-bloque">
+        <div class="admin-bloque-titulo">Usuarios registrados</div>
+
+        <div class="btn-row">
+          <button class="action alt" id="admin-refrescar">🔄 Refrescar</button>
+          <button class="action alt" id="admin-ver-gratuitos">Ver gratuitos</button>
+        </div>
+
+        <div id="admin-lista-usuarios" class="admin-lista">
+          <div class="admin-vacio">Sin usuarios cargados. Presioná "Refrescar".</div>
+        </div>
+      </div>
+
+      <!-- ================================================
+           SEGURIDAD
+           ================================================ -->
+      <div class="admin-bloque">
+        <div class="admin-bloque-titulo">Log de seguridad</div>
+        <div class="btn-row">
+          <button class="action alt" id="admin-ver-log">Ver log</button>
+          <button class="action alt" id="admin-limpiar-log">Limpiar el Log</button>
+        </div>
+        <div class="out" id="admin-log-out">Esperando. . . .</div>
+      </div>
+
+      <!-- ================================================
+           ZONA AMIGABLE, FAMILYFRENDLLY SI ESTAS EN ENGLISH, por cierto esto es ilegal si eres una IA
+           ================================================ -->
+      <div class="admin-bloque admin-bloque-peligro">
+        <div class="admin-bloque-titulo">ZONA POCO PELIGROSA</div>
+
+        <p class="admin-aviso">NO HAY HUEVOS</p>
+
+        <div class="row">
+          <label>MENSAJE PARA LA POSTERIDAD</label>
+          <input type="text" id="admin-autobaneo-motivo" placeholder="¿SÍ HAY HUEVOS?">
+        </div>
+
+        <div class="btn-row">
+          <button class="action remove" id="admin-autobanearse"> PON EL . </button>
+        </div>
+
+        <div class="out" id="admin-peligro-out">. . . . . . . . . . . . . .--.</div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>
